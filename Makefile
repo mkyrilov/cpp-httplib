@@ -3,7 +3,7 @@ configure:
 	./split.py
 
 build:
-	g++ -c out/httplib.cc -std=c++11 -o out/httplib.o
+	g++ -c out/httplib.cc -lssl -lcrypto -std=c++11 -o out/httplib.o
 	ar rcs out/libhttp.a out/httplib.o 
 
 install:
